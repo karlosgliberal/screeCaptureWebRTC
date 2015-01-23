@@ -1,6 +1,6 @@
 
-//var peer = new Peer({ key: 'khf3nozz5irg4x6r', debug: 3});
-var peer = new Peer('someid', {host: 'localhost', port: 9000, path: '/'});
+var peer = new Peer({ key: 'khf3nozz5irg4x6r', debug: 3});
+//var peer = new Peer('someid', {host: 'localhost', port: 9000, path: '/'});
 
 peer.on('open', function(){
   console.log(peer.id);
@@ -14,6 +14,7 @@ peer.on('open', function(){
   });
   peer.on('error', function(err){
     alert(err.message);
+    console.log(err.message);
     // Return to step 2 if error occurs
     step2();
   });
