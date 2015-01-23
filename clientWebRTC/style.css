@@ -85,16 +85,16 @@ body {
 }
 
 video {
-	width: 268px;
-	height: 63px;
+	width: 536px;
+	height: 150px;
 }
 
 .video-bk
 {
-    width: 319px;
-    height: 116px;
+/*    width: 319px;
+    height: 116px;*/
     margin: 0 auto;
-    background-image: url('video-bk.png');
+    /*background-image: url('video-bk.png');*/
     background-repeat: none;
 }
 

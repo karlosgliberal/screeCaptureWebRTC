@@ -20,7 +20,7 @@ peer.on('error', function(err){
 function gotStream(stream) {
   var video = document.querySelector("video");
   video.src = URL.createObjectURL(stream);
-  var call = peer.call('etopia', stream);
+  var call = peer.call('etopiaByInterzonas', stream);
   localstream = stream;
   stream.onended = function() { console.log("Ended"); };
 }
@@ -51,10 +51,10 @@ function onAccessApproved(id) {
         mandatory: { 
           chromeMediaSource: "desktop",
           chromeMediaSourceId: id,
-          minWidth: "268",
-          minHeight: "63",
-          maxWidth: "268",
-          maxHeight: "63" 
+          minWidth: "536",
+          minHeight: "150",
+          maxWidth: "536",
+          maxHeight: "150" 
         } 
       }
   }, gotStream, getUserMediaError);
