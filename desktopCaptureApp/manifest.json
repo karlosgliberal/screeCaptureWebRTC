@@ -1,7 +1,7 @@
 {
-  "name": "Desktop Capture Example",
-  "description": "Show desktop media picker UI",
-  "autor": "http://interzonas.info",
+  "name": "Captura y webRTC",
+  "description": "Sistema de Captura de ventana y envio mediante webRTC a un cliente",
+  "author": "http://interzonas.info",
   "version": "0.1",
   "manifest_version": 2,
   "icons": {
