@@ -3,6 +3,7 @@
 <style>
   body {
     background: white;
+    background-image: url("body-bk.png");
     display: -webkit-flex;
     -webkit-justify-content: center;
     -webkit-align-items: center;
@@ -13,6 +14,7 @@
     height: 63px;
     border: 1px solid #e2e2e2;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    background-color: #fff;
   }
   .btn {
     background-color: #3FC5F7;
@@ -28,15 +30,22 @@
     width: 100%;
     height: 30;
   }
-
+  .mensaje {
+    display: none;
+    color:#000;
+    font-size: 15px;
+    padding-top: 10px;
+  }
 
 </style>
 </head>
 <body>
 
   <video id="video"  class="local" autoplay></video>
+  <div class="mensaje">Connected and sending screen!</div>
   <div class="divide30"></div>
-    <button id="start" class="btn">SCREEN CAPTURES</button>
+    <button id="start" class="btn">SCREEN CAPTURE</button>
+  <div class="divide30"></div>
   <script src="jquery.min.js"></script>
   <script src="peer.js"></script>
   <script src="app.js"></script>
