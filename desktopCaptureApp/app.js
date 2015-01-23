@@ -54,7 +54,7 @@ function onAccessApproved(id) {
           minWidth: "268",
           minHeight: "63",
           maxWidth: "268",
-          maxHeight: "268" 
+          maxHeight: "63" 
         } 
       }
   }, gotStream, getUserMediaError);
