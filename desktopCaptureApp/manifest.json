@@ -1,7 +1,8 @@
 {
   "name": "Desktop Capture Example",
   "description": "Show desktop media picker UI",
-  "version": "1",
+  "autor": "http://interzonas.info",
+  "version": "0.1",
   "manifest_version": 2,
   "icons": {
     "16": "icon.png",

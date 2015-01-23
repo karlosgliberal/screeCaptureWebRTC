@@ -1,6 +1,5 @@
 
 var peer = new Peer({ key: 'khf3nozz5irg4x6r', debug: 3});
-//var peer = new Peer('someid', {host: 'localhost', port: 9000, path: '/'});
 
 peer.on('open', function(){
   console.log(peer.id);
