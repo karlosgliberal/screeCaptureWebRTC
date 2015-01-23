@@ -31,7 +31,9 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 
-
+body {
+	background-color: #EBEBEB;
+}
 
 
 *, *:before, *:after {
@@ -40,19 +42,20 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 .g-70 {
 	width: 100%;
-
 }
 
-.btn {
-    background-color: #3FC5F7;
+.btn
+{
+    font-size: 14px;
     padding: 10px 15px;
-    border: 1px solid #3FC5F7;
-    border-radius: 5px 5px;
+    cursor: pointer;
     text-transform: uppercase;
     color: #fff;
-    font-size: 14px;
-    cursor: pointer;
- }
+    border: 1px solid #3fc5f7;
+    border-radius: 5px 5px;
+    background-color: #3fc5f7;
+}
+
 
 .center {
 	text-align: center;
@@ -62,11 +65,13 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 	padding: 7px 15px;
 }
 
-#their-video {
-  background-color: #ccc;
-  position: relative;
-  top: 26px;
+#their-video
+{
+    position: relative;
+    top: 26px;
+    background-color: #ccc;
 }
+
 
 #video-container {
   padding: 90px;
@@ -75,6 +80,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 #step1-error, #step2, #step3 {
   display: none;
 }
+
 #my-id {
   font-weight: bold;
 }
@@ -84,13 +90,15 @@ video {
 	height: 63px;
 }
 
-.video-bk {
-	background-image: url("video-bk.png");
-	background-repeat: none;
-	width: 319px;
-	height: 116px;
-	margin: 0 auto;
+.video-bk
+{
+    width: 319px;
+    height: 116px;
+    margin: 0 auto;
+    background-image: url('video-bk.png');
+    background-repeat: none;
 }
+
 
 .header-wrapper {
 	width: 100%;
@@ -100,9 +108,41 @@ video {
 
 .esperar-texto {
 	letter-spacing: 0;
-	margin-bottom: 80px;
+	margin-bottom: 25px;
 }
 
-body {
-	background-color: #EBEBEB;
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
