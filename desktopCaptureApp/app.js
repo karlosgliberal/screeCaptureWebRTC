@@ -9,7 +9,7 @@ peer.on('open', function(){
 peer.on('call', function(call){
   // Answer the call automatically (instead of prompting user) for demo purposes
   call.answer(window.localStream);
-  step3(call);
+  llamada(call);
 });
 
 peer.on('error', function(err){
@@ -29,7 +29,9 @@ function getUserMediaError() {
   console.log("getUserMedia() failed.");
 }
 
-function step3 (call) {
+function llamada (call) {
+  alert('step3')
+  console.log('step3');
   // Wait for stream on the call, then set peer video display
   call.on('stream', function(stream){
     $('#video').prop('src', URL.createObjectURL(stream));
@@ -43,30 +45,18 @@ function onAccessApproved(id) {
     return;
   }
 
-{
- "audio": true,
- "video": {
-  "mandatory": {
-   "minWidth": "268",
-   "minHeight": "63",
-   "maxWidth": "268",
-   "maxHeight": "268"
-  }
- }
-}
-
   navigator.webkitGetUserMedia({
-    audio:false,
-    video: { 
-      mandatory: { 
-        chromeMediaSource: "desktop",                    
-        chromeMediaSourceId: id,
-        minWidth:  "268",
-        minHeight: "63",
-        maxWidth:  "268",
-        maxHeight: "268"
+      audio:false,
+      video: { 
+        mandatory: { 
+          chromeMediaSource: "desktop",
+          chromeMediaSourceId: id,
+          minWidth: "268",
+          minHeight: "63",
+          maxWidth: "268",
+          maxHeight: "268" 
+        } 
       }
-    }
   }, gotStream, getUserMediaError);
 }
 
@@ -77,9 +67,4 @@ document.querySelector('#start').addEventListener('click', function(e) {
       ["screen", "window"], onAccessApproved);
 });
 
-document.querySelector('#cancel').addEventListener('click', function(e) {
-  if (pending_request_id != null) {
-    chrome.desktopCapture.cancelChooseDesktopMedia(pending_request_id);
-  }
-});
 
