@@ -10,8 +10,7 @@
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // PeerJS object
-    var peer = new Peer({ key: 'khf3nozz5irg4x6r', debug: 3});
-    //var peer = new Peer('someid1', {host: '10.10.10.104', port: 9000, path: '/'});
+    var peer = new Peer('etopia', { key: 'khf3nozz5irg4x6r', debug: 3});
 
     peer.on('open', function(){
       $('#my-id').text(peer.id);

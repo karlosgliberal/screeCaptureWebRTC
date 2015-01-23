@@ -20,7 +20,7 @@ peer.on('error', function(err){
 function gotStream(stream) {
   var video = document.querySelector("video");
   video.src = URL.createObjectURL(stream);
-  var call = peer.call('etopia_', stream);
+  var call = peer.call('etopia', stream);
   localstream = stream;
   stream.onended = function() { console.log("Ended"); };
 }
@@ -43,10 +43,30 @@ function onAccessApproved(id) {
     return;
   }
 
+{
+ "audio": true,
+ "video": {
+  "mandatory": {
+   "minWidth": "268",
+   "minHeight": "63",
+   "maxWidth": "268",
+   "maxHeight": "268"
+  }
+ }
+}
+
   navigator.webkitGetUserMedia({
-      audio:false,
-      video: { mandatory: { chromeMediaSource: "desktop",
-                            chromeMediaSourceId: id } }
+    audio:false,
+    video: { 
+      mandatory: { 
+        chromeMediaSource: "desktop",                    
+        chromeMediaSourceId: id,
+        minWidth:  "268",
+        minHeight: "63",
+        maxWidth:  "268",
+        maxHeight: "268"
+      }
+    }
   }, gotStream, getUserMediaError);
 }
 
