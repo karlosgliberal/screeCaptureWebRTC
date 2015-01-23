@@ -9,10 +9,24 @@
     -webkit-flex-direction: column;
   }
   video {
-    width: 640px;
-    height: 480px;
+    width: 268px;
+    height: 63px;
     border: 1px solid #e2e2e2;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  }
+  .btn {
+    background-color: #3FC5F7;
+    padding: 10px 15px;
+    border: 1px solid #3FC5F7;
+    border-radius: 5px 5px;
+    text-align: uppercase;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .divide30 {
+    width: 100%;
+    height: 30;
   }
 
 
@@ -21,11 +35,8 @@
 <body>
 
   <video id="video"  class="local" autoplay></video>
-
-  <p>
-    <button id="start">Capturar Ventana</button>
-    <button id="cancel">Cancel</button>
-  </p>
+  <div class="divide30"></div>
+    <button id="start" class="btn">SCREEN CAPTURES</button>
   <script src="jquery.min.js"></script>
   <script src="peer.js"></script>
   <script src="app.js"></script>
