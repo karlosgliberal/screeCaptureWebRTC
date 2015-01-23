@@ -5,23 +5,22 @@ peer.on('open', function(){
   console.log(peer.id);
 });
 
-  // Receiving a call
-  peer.on('call', function(call){
-    // Answer the call automatically (instead of prompting user) for demo purposes
-    call.answer(window.localStream);
-    step3(call);
-  });
-  peer.on('error', function(err){
-    alert(err.message);
-    console.log(err.message);
-    // Return to step 2 if error occurs
-    step2();
-  });
+// Receiving a call
+peer.on('call', function(call){
+  // Answer the call automatically (instead of prompting user) for demo purposes
+  call.answer(window.localStream);
+  step3(call);
+});
+
+peer.on('error', function(err){
+  alert(err.message);
+  console.log(err.message);
+});
 
 function gotStream(stream) {
   var video = document.querySelector("video");
   video.src = URL.createObjectURL(stream);
-  var call = peer.call('someid1', stream);
+  var call = peer.call('etopia_', stream);
   localstream = stream;
   stream.onended = function() { console.log("Ended"); };
 }
@@ -31,20 +30,10 @@ function getUserMediaError() {
 }
 
 function step3 (call) {
-  // Hang up on an existing call if present
-
-
   // Wait for stream on the call, then set peer video display
   call.on('stream', function(stream){
     $('#video').prop('src', URL.createObjectURL(stream));
   });
-
-  // UI stuff
-  // window.existingCall = call;
-  // $('#their-id').text(call.peer);
-  // call.on('close', step2);
-  // $('#step1, #step2').hide();
-  // $('#step3').show();
 }
 
 
@@ -74,8 +63,3 @@ document.querySelector('#cancel').addEventListener('click', function(e) {
   }
 });
 
-document.querySelector('#startFromBackgroundPage')
-    .addEventListener('click', function(e) {
-      chrome.runtime.sendMessage(
-          {}, function(response) { console.log(response.farewell); });
-    });
