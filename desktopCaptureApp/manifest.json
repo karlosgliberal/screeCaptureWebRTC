@@ -1,7 +1,7 @@
 {
   "name": "Captura y webRTC",
   "description": "Sistema de Captura de ventana y envio mediante webRTC a la fachada de leds del centro @etopia_",
-  "author": "http://interzonas.info",
+  "author": "Desde los laboratorios de http://interzonas.info",
   "version": "0.1",
   "manifest_version": 2,
   "icons": { 
