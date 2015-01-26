@@ -3,6 +3,7 @@
 <style>
   body {
     background: white;
+    background-image: url("body-bk.png");
     display: -webkit-flex;
     -webkit-justify-content: center;
     -webkit-align-items: center;
@@ -35,16 +36,26 @@
     font-size: 15px;
     padding-top: 10px;
   }
+  .logo-int {
+    position: absolute;
+    bottom: 8px;
+    right: 21px;
+  }
+  .logo-int a:hover {
+    opacity: 0.8;
+  }
+
 
 </style>
 </head>
 <body>
-
+  <div class="divide30"></div>
   <video id="video"  class="local" autoplay></video>
   <div class="mensaje">Connected and sending screen!</div>
   <div class="divide30"></div>
     <button id="start" class="btn">SCREEN CAPTURE</button>
   <div class="divide30"></div>
+  <div class="logo-int"><a href="http://labs.interzonas.info" target="_blank"><img src="logo-int.png"></a></div>
   <script src="jquery.min.js"></script>
   <script src="peer.js"></script>
   <script src="app.js"></script>
