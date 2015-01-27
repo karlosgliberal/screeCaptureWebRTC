@@ -48,6 +48,10 @@ p {
 	width: 100%;
 }
 
+.in-cap {
+	background-color: #fff;
+}
+
 .btn
 {
     font-size: 14px;
