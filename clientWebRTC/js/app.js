@@ -3,7 +3,7 @@
     $(function(){
       $('#make-connect').click(function(){
         // PeerJS object
-        var peer = new Peer('etopiaByInterzonas', { key: 'khf3nozz5irg4x6r', debug: 3});
+        var peer = new Peer('clienteByInterzonas', { key: 't8jdgbn69x315rk9', debug: 3});
 
         peer.on('open', function(){
           $('#my-id').text(peer.id);

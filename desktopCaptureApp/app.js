@@ -1,5 +1,5 @@
-
-var peer = new Peer({ key: 'khf3nozz5irg4x6r', debug: 3});
+//Api key en peerjs, la que esta puesta tendrias que cambiarla http://peerjs.com/peerserver
+var peer = new Peer({ key: 't8jdgbn69x315rk9', debug: 3});
 
 peer.on('open', function(){
   console.log(peer.id);
@@ -20,7 +20,8 @@ peer.on('error', function(err){
 function gotStream(stream) {
   var video = document.querySelector("video");
   video.src = URL.createObjectURL(stream);
-  var call = peer.call('etopiaByInterzonas', stream);
+  //id del par al que llamas, para nuestro proposito podemos hacer esto, en cualquier otro caso no valdrá 
+  var call = peer.call('clienteByInterzonas', stream);
   localstream = stream;
   stream.onended = function() { console.log("Ended"); };
 }
